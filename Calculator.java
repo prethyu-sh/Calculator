@@ -339,7 +339,13 @@ public class Calculator implements ActionListener{      //ActionListener helps c
                         default:
                             break;
                 }
-                display.setText(result+"");
+                if(result == (int)result){
+                    display.setText((int)result+"");
+                }
+                else{
+                    display.setText(result+"");
+                }
+                
             }
         }
         else if(e.getSource()==divButton)
